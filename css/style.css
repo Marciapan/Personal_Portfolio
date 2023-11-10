@@ -1,132 +1,128 @@
-h1 {
-    color: blueviolet;
-    /* figure out how to make font smaller when viewport is normal. Phone font size is good. */
-    font-size: 5vw;
-    padding: 10px;
-}
-
-li a {
-    padding: 8px;
-    display: block;
-    text-decoration: none;
-    color: white;
-}
-
-li a:hover {
-    background-color: #111;
-}
-
-.navbar {
-    color: white;
-    list-style-type: none;
+html {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
 }
 
-.navitem {
-    float: left;
-
-    padding-left: 1%;
-    padding-right: 1%;
+li {
+    list-style-type: none;
 }
 
-.navitem:first-child {
-    padding-left: 5%;
+/* For mobile view */
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    li a {
+        padding: 8px;
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 3vw;
+    }
+
+    li a:hover {
+        background-color: #111;
+    }
+
+    .navbar {
+        color: white;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .navitem {
+        float: left;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .navitem:first-child {
+        padding-left: 5%;
+    }
+
+    .navitem:last-child {
+        float: right;
+        padding-right: 5%;
+    }
+
+    .footer {
+        display: inline-block;
+        padding-inline-start: 0;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .lists {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        background-color: lightskyblue;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    .image{
+        align-items: center;
+        justify-content: center;
+        border-radius: 5%;
+    }
 }
 
-.navitem:last-child {
-    float: right;
-    padding-right: 5%;
-}
+/* For desktop view */
+@media only screen and (min-width: 768px) {
 
-/* organise the slider css a lil nicer. */
-.slider {
-    width: 50%;
-    text-align: center;
-    overflow: hidden;
-    margin-left:25%;
-    margin-right: 25%;
-}
+    h1 {
+        color: purple;
+        font-size: 2vw;
+        padding: 10px;
+    }
 
-.slides {
-    display: flex;
+    li a {
+        padding: 8px;
+        display: block;
+        text-decoration: none;
+        color: white;
+    }
 
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    li a:hover {
+        background-color: #111;
+    }
 
+    .navbar {
+        color: white;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
 
+    .navitem {
+        float: left;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
 
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    .navitem:first-child {
+        padding-left: 5%;
+    }
 
-    
-    scroll-snap-points-x: repeat(300px);
-    scroll-snap-type: mandatory;
-   
-}
+    .navitem:last-child {
+        float: right;
+        padding-right: 5%;
+    }
 
-.slides::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-.slides::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 10px;
-}
-
-.slides::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.slides>div {
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    width: 600px;
-    height: 400px;
-    margin-right: 50px;
-    border-radius: 10px;
-    background: #eee;
-    transform-origin: center center;
-    transform: scale(1);
-    transition: transform 0.5s;
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 100px;
-}
-
-img {
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.slider>a {
-    display: inline-flex;
-    width: 1.5rem;
-    height: 1.5rem;
-    background: white;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin: 0 0 0.5rem 0;
-    position: relative;
-    
-}
-
-.slider>a:active {
-    top: 1px;
-}
-
-.slider>a:focus {
-    background: #000;
 }
