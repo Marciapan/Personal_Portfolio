@@ -75,9 +75,19 @@ li {
     }
 
     .image{
+        display: block;
         align-items: center;
         justify-content: center;
         border-radius: 5%;
+        width: 50%;
+        height: 50%;
+    }
+
+    .test{
+        display: flex;
+    }
+    .hortxt{
+        flex-direction: column;
     }
 }
 
