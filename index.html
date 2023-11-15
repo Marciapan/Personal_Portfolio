@@ -17,53 +17,77 @@
   <header>
     <!-- Make header a link to index.html! -->
     <!-- or add my logo or smth -->
-    <h1>Tessa van Breukelen portfolio</h1>
+    <h1>Tessa van Breukelen - Home</h1>
     <nav>
       <ul class="navbar">
-        <li class="navitem"><a href="#">Home</a></li>
-        <li class="navitem"><a href="#">Works</a></li>
-        <li class="navitem"><a href="#">Projects</a></li>
-        <li class="navitem"><a href="#">Sketchbook</a></li>
-        <li class="navitem"><a href="#">About me</a></li>
+        <li class="navitem"><a href="index.html" class="navlink">Home</a></li>
+        <li class="navitem"><a href="works.html" class="navlink">Works</a></li>
+        <li class="navitem"><a href="projects.html" class="navlink">Projects</a></li>
+        <li class="navitem"><a href="sketchbook.html" class="navlink">Sketchbook</a></li>
+        <li class="navitem"><a href="aboutme.html" class="navlink">About me</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <!-- Figure out what I want here: MOBILE FIRST!! -->
+    
+    <!-- First section: Works -->
     <section class="test">
-      <img class="image" src="../Personal_Portfolio/images/Context map 1.2.jpg" alt="Context map voor Project Beyond">
+      <img class="image" src="images/Context map 1.2.jpg" alt="Context map voor Project Beyond">
       <div class="hortxt">
-        <h2>Header for something</h2> 
-        <p>Text about who I am and what I do! I'm definitely a professional. Definitely.</p>
-        <button>This is a button</button>
+        <h2 class="header">Hello!</h2>
+        <p class="indexTxt">Looking for a Digital Designer? I'm your girl!</p>
+        <button class="indexButton">This is a button</button>
+      </div>
+    </section>
+    <!-- Second section: Projects -->
+    <section class="test2">
+      <img class="image" src="images/Context map 1.2.jpg" alt="Context map voor Project Beyond">
+      <div class="hortxt">
+        <h2 class="header">Header 2!</h2>
+        <p class="indexTxt">Nog een voorbeeld van wat ik kan!</p>
+        <button class="indexButton">Another button??</button>
+      </div>
+    </section>
+    <!-- Third section: Sketchbook -->
+    <section class="test">
+      <img class="image" src="images/Context map 1.2.jpg" alt="Context map voor Project Beyond">
+      <div class="hortxt">
+        <h2 class="header">OOoooh skills!</h2>
+        <p class="indexTxt">Look at everything I can do!</p>
+        <button class="indexButton">Yet another button</button>
+      </div>
+    </section>
+    <!-- Fourth section: About me -->
+    <section class="test2">
+      <img class="image" src="images/Context map 1.2.jpg" alt="Context map voor Project Beyond">
+      <div class="hortxt">
+        <h2 class="header">Laatste header!</h2>
+        <p class="indexTxt">Maar wie ben ik nou??</p>
+        <button class="indexButton">Klik om te ondervinden</button>
       </div>
     </section>
 
-    
-    
   </main>
-
 
   <footer>
     <div class="lists">
       <ul class="footer">
-        <li>Works</li>
-        <li>Projects</li>
-        <li>Sketchbook</li>
-        <li>About me</li>
+        <li><a href="works.html" class="footerlink">Works</a></li>
+        <li><a href="projects.html" class="footerlink">Projects</a></li>
+        <li><a href="sketchbook.html" class="footerlink">Sketchbook</a></li>
+        <li><a href="aboutme.html" class="footerlink">About me</a></li>
       </ul>
       <ul class="footer">
+        <!-- make icons for footer: 2 sizes!! mobile + desktop -->
         <li>Instagram</li>
         <li>Linkedin</li>
         <li>Email</li>
       </ul>
     </div>
-    <p>© 2023 Tessa van Breukelen - All rights reserved</p>
+    <p class="credits">© 2023 Tessa van Breukelen - All rights reserved</p>
   </footer>
 
   <script src="js/script.js"></script>
 </body>
 
 </html>
-
-<!-- CSS only caroussel base by https://css-tricks.com/css-only-carousel/ -->

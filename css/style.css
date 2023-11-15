@@ -17,15 +17,26 @@ li {
         font-size: 5vw;
     }
 
-    li a {
-        padding: 8px;
+    footer {
+        background-color: lightblue;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    .credits{
+        justify-content: center;
+    }
+
+    .navlink {
         display: block;
         text-decoration: none;
         color: white;
         font-size: 3vw;
     }
 
-    li a:hover {
+    .navitem:hover {
         background-color: #111;
     }
 
@@ -42,6 +53,11 @@ li {
         float: left;
         padding-left: 1%;
         padding-right: 1%;
+        padding: 8px;
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 3vw;
     }
 
     .navitem:first-child {
@@ -60,24 +76,25 @@ li {
         padding: 10px;
     }
 
+    .footerlink{
+        color: white;
+        text-decoration: none;
+    }
+
     .lists {
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    footer {
-        background-color: lightskyblue;
-    }
-
-    img{
-        max-width: 100%;
-    }
-
     .image{
         display: block;
-        align-items: center;
-        justify-content: center;
+        border-radius: 5%;
+        width: 50%;
+        height: 50%;
+    }
+
+    .sketchbookimage{
         border-radius: 5%;
         width: 50%;
         height: 50%;
@@ -85,9 +102,41 @@ li {
 
     .test{
         display: flex;
+        align-items: center;
+        padding: 10px;
+        
+    }
+
+    .test2{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        flex-direction: row-reverse;
     }
     .hortxt{
+        padding: 0;
+        margin: 0;
+        margin-left: 2%;
+        margin-right: 2%;
+        display: flex;
         flex-direction: column;
+    }
+
+    .header{
+        margin-bottom: 0;
+    }
+
+    .indexTxt{
+        margin-top: 0;
+    }
+
+    .indexButton{
+        color: pink;
+    }
+
+    .scroll{
+        overflow: auto;
+        white-space: nowrap;
     }
 }
 
