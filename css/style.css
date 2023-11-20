@@ -1,6 +1,7 @@
 html {
     margin: 0;
     padding: 0;
+    display: grid;
 }
 
 li {
@@ -11,6 +12,10 @@ li {
 @media only screen and (max-width: 768px) {
     body {
         margin: 0;
+        /* fix the logo!! */
+        background-image: url("../images/Logo_Marciapan.png");
+        height: 100px;
+
     }
 
     h1 {
@@ -96,8 +101,7 @@ li {
 
     .sketchbookimage{
         border-radius: 5%;
-        width: 50%;
-        height: 50%;
+        width: 70%;
     }
 
     .test{
@@ -123,11 +127,13 @@ li {
     }
 
     .header{
+        margin-top: 0;
         margin-bottom: 0;
     }
 
     .indexTxt{
         margin-top: 0;
+        margin-bottom: 0;
     }
 
     .indexButton{
@@ -135,6 +141,7 @@ li {
     }
 
     .scroll{
+        margin: 1em;
         overflow: auto;
         white-space: nowrap;
     }
