@@ -12,10 +12,10 @@ li {
 @media only screen and (max-width: 768px) {
     body {
         margin: 0;
-        /* fix the logo!! */
         background-image: url("../images/Logo_Marciapan.png");
-        height: 100px;
-
+        background-size: 15%;
+        background-repeat: no-repeat;
+        background-position: top right;
     }
 
     h1 {
@@ -26,19 +26,19 @@ li {
         background-color: lightblue;
     }
 
-    img{
+    img {
         max-width: 100%;
     }
 
-    .credits{
-        justify-content: center;
+    .credits {
+        margin-bottom: 0;
     }
 
     .navlink {
         display: block;
         text-decoration: none;
         color: white;
-        font-size: 3vw;
+        font-size: 4.2vw;
     }
 
     .navitem:hover {
@@ -81,7 +81,7 @@ li {
         padding: 10px;
     }
 
-    .footerlink{
+    .footerlink {
         color: white;
         text-decoration: none;
     }
@@ -92,32 +92,33 @@ li {
         justify-content: center;
     }
 
-    .image{
+    .image {
         display: block;
         border-radius: 5%;
         width: 50%;
         height: 50%;
     }
 
-    .sketchbookimage{
+    .sketchbookimage {
         border-radius: 5%;
         width: 70%;
     }
 
-    .test{
+    .test {
         display: flex;
         align-items: center;
-        padding: 10px;
-        
+        padding: 20px;
+
     }
 
-    .test2{
+    .test2 {
         display: flex;
         align-items: center;
         padding: 10px;
         flex-direction: row-reverse;
     }
-    .hortxt{
+
+    .hortxt {
         padding: 0;
         margin: 0;
         margin-left: 2%;
@@ -126,21 +127,21 @@ li {
         flex-direction: column;
     }
 
-    .header{
+    .header {
         margin-top: 0;
         margin-bottom: 0;
     }
 
-    .indexTxt{
+    .indexTxt {
         margin-top: 0;
         margin-bottom: 0;
     }
 
-    .indexButton{
+    .indexButton {
         color: pink;
     }
 
-    .scroll{
+    .scroll {
         margin: 1em;
         overflow: auto;
         white-space: nowrap;
@@ -149,11 +150,26 @@ li {
 
 /* For desktop view */
 @media only screen and (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* rows aanpassen aan content */
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    body {
+        margin: 0;
+        background-image: url("../images/Logo_Marciapan.png");
+        background-size: 8%;
+        background-repeat: no-repeat;
+
+    }
 
     h1 {
         color: purple;
         font-size: 2vw;
         padding: 10px;
+        margin-left: 7%;
     }
 
     li a {
@@ -163,7 +179,11 @@ li {
         color: white;
     }
 
-    li a:hover {
+    footer {
+        background-color: lightblue;
+    }
+
+    .navitem:hover {
         background-color: #111;
     }
 
@@ -190,5 +210,38 @@ li {
         float: right;
         padding-right: 5%;
     }
+
+    .test {
+        grid-column-start: 2;
+        grid-column-end: -6;
+    }
+
+    .test2 {
+        grid-column-start: 6;
+        grid-column-end: -2;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .footer {
+        display: inline-block;
+        padding-inline-start: 0;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .footerlink {
+        color: black;
+        text-decoration: none;
+    }
+
+    .lists {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 
 }
