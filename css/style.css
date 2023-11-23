@@ -38,7 +38,7 @@ li {
         display: block;
         text-decoration: none;
         color: white;
-        font-size: 4.2vw;
+        font-size: 4.1vw;
     }
 
     .navitem:hover {
@@ -66,7 +66,7 @@ li {
     }
 
     .navitem:first-child {
-        padding-left: 5%;
+        margin-left: 2%;
     }
 
     .navitem:last-child {
@@ -104,11 +104,16 @@ li {
         width: 70%;
     }
 
-    .test {
+    .worksSection {
         display: flex;
         align-items: center;
-        padding: 20px;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 3%;
+    }
 
+    .worksSection:last-child {
+        margin-bottom: 3%;
     }
 
     .test2 {
@@ -146,6 +151,10 @@ li {
         overflow: auto;
         white-space: nowrap;
     }
+
+    .yay {
+        background-color: purple;
+    }
 }
 
 /* For desktop view */
@@ -180,7 +189,16 @@ li {
     }
 
     footer {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 2fr;
+        /* rows aanpassen aan content */
+        grid-template-rows: 3fr 1fr;
         background-color: lightblue;
+    }
+
+    .lists{
+        grid-column-start: 2;
+        grid-column-end: 4;
     }
 
     .navitem:hover {
@@ -208,7 +226,7 @@ li {
 
     .navitem:last-child {
         float: right;
-        padding-right: 5%;
+        margin-right: 5%;
     }
 
     .test {
@@ -243,5 +261,10 @@ li {
         justify-content: center;
     }
 
+    .credits {
+        margin-bottom: 0;
+        grid-row-start: 2;
+        grid-column-start:1;
+    }
 
 }
