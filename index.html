@@ -6,77 +6,73 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- imported fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Sansita+Swashed:wght@300;400;700&display=swap"
+    rel="stylesheet">
 
   <!-- TO DO: -->
-
-    <!-- Buttons tussendoor weghalen: tekst en foto klikbaar maken?? -->
-    <!-- SCHETSEN MAKEN VOOR DESKTOP VIEW!!! IK HEB GEEN IDEE WAT IK AAN HET DOEN BEN -->
-    <!-- redesign landing page mobile & desktop -->
+  <!-- figure out font places, i like Sansita as the header, but the rest needs work -->
+  <!-- maybe add a photo? -->
 
   <title>Portfolio - Tessa van Breukelen</title>
 </head>
 
 <body>
   <header>
-    <!-- Make header a link to index.html! -->
-    <h1>Tessa van Breukelen - Home</h1>
+    <section class="head">
+      <a href="index.html"><img src="./images/Logo_Marciapan.png" alt="Mijn logo, klikbaar"></a>
+      <h1>Tessa van Breukelen - Home</h1>
+    </section>
     <nav>
       <ul class="navbar">
         <li class="navitem"><a href="index.html" class="navlink">Home</a></li>
-        <li class="navitem"><a href="works.html" class="navlink">Works</a></li>
-        <li class="navitem"><a href="projects.html" class="navlink">Projects</a></li>
-        <li class="navitem"><a href="sketchbook.html" class="navlink">Sketchbook</a></li>
-        <li class="navitem"><a href="aboutme.html" class="navlink">About me</a></li>
+        <li class="navitem"><a href="works.html" class="navlink">Werken</a></li>
+        <li class="navitem"><a href="projects.html" class="navlink">Projecten</a></li>
+        <li class="navitem"><a href="sketchbook.html" class="navlink">Schetsboek</a></li>
+        <li class="navitem"><a href="aboutme.html" class="navlink">Over mij</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <!-- First section: Works -->
-    <section class="test">
-      <img class="image" src="images/CatGameSmall.jpg" alt="Foto van een tamagochi spel met een kat">
-      <div class="hortxt">
-        <h2 class="header">Hello!</h2>
-        <p class="indexTxt">Looking for a Digital Designer? I'm your girl!</p>
-        <button class="indexButton">This is a button</button>
-      </div>
+    <section class="home">
+      <article>
+        <h2>Hallo!</h2>
+        <p>Ik ben Tessa, digital designer en tweedejaars student CMD op het HvA!</p>
+      </article>
+
+      <article>
+        <h2>Mijn ervaring:</h2>
+        <p>Ik heb o.a. ervaring met Illustrator, XD, Photoshop en frontend development! <br>Ook vind ik het
+          leuk om af en toe iets te maken in Blender!</p>
+      </article>
+
+      <article>
+        <h2>Wie ben ik?</h2>
+        <p>In mijn vrije tijd ben ik vaak bezig met schilderen, tekenen en ontwerpen! <br>Ik probeer mijn creativiteit op
+          veel verschillende manieren te uiten. <br>Nieuwsgierig? Bekijk mijn werken, projecten en schetsboek!</p>
+      </article>
+
+      <section class="buttonGrid">
+        <button class="fancyButton">Werken</button>
+        <button class="fancyButton">Projecten</button>
+        <button class="fancyButton">Schetsboek</button>
+      </section>
+
     </section>
-    <!-- Second section: Projects -->
-    <section class="test2">
-      <img class="image" src="images/Context map 1.2.jpg" alt="Context map voor Project Beyond">
-      <div class="hortxt">
-        <h2 class="header">Header 2!</h2>
-        <p class="indexTxt">Nog een voorbeeld van wat ik kan!</p>
-        <button class="indexButton">Another button??</button>
-      </div>
-    </section>
-    <!-- Third section: Sketchbook -->
-    <section class="test">
-      <img class="image" src="images/SnowGlobe.png" alt="3D snowglobe gemaakt in Blender">
-      <div class="hortxt">
-        <h2 class="header">OOoooh skills!</h2>
-        <p class="indexTxt">Look at everything I can do!</p>
-        <button class="indexButton">Yet another button</button>
-      </div>
-    </section>
-    <!-- Fourth section: About me -->
-    <section class="test2">
-      <img class="image" src="images/Boekenzoeker Home.png" alt="App voor een bibliotheek genaamd Boekenzoeker">
-      <div class="hortxt">
-        <h2 class="header">Laatste header!</h2>
-        <p class="indexTxt">Maar wie ben ik nou??</p>
-        <button class="indexButton">Klik om te ondervinden</button>
-      </div>
-    </section>
+
 
   </main>
 
   <footer>
     <div class="lists">
       <ul class="footer">
-        <li><a href="works.html" class="footerlink">Works</a></li>
-        <li><a href="projects.html" class="footerlink">Projects</a></li>
-        <li><a href="sketchbook.html" class="footerlink">Sketchbook</a></li>
-        <li><a href="aboutme.html" class="footerlink">About me</a></li>
+        <li><a href="works.html" class="footerlink">Werken</a></li>
+        <li><a href="projects.html" class="footerlink">Projecten</a></li>
+        <li><a href="sketchbook.html" class="footerlink">Schetsboek</a></li>
+        <li><a href="aboutme.html" class="footerlink">Over mij</a></li>
       </ul>
       <ul class="footer">
         <!-- make icons for footer!!!-->

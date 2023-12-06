@@ -6,6 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- imported fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Sansita+Swashed:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
 
   <!-- TO DO: Export all the right files for nice pictures to put in here!
     See other notes for next step in process! -->
@@ -15,40 +22,77 @@
 
 <body>
   <header>
-    <!-- Make header a link to index.html! -->
-    <h1>Tessa van Breukelen - Projects</h1>
+    <section class="head">
+      <a href="index.html"><img src="./images/Logo_Marciapan.png" alt="Mijn logo, klikbaar"></a>
+      <h1>Tessa van Breukelen - Home</h1>
+    </section>
     <nav>
       <ul class="navbar">
         <li class="navitem"><a href="index.html" class="navlink">Home</a></li>
-        <li class="navitem"><a href="works.html" class="navlink">Works</a></li>
-        <li class="navitem"><a href="projects.html" class="navlink">Projects</a></li>
-        <li class="navitem"><a href="sketchbook.html" class="navlink">Sketchbook</a></li>
-        <li class="navitem"><a href="aboutme.html" class="navlink">About me</a></li>
+        <li class="navitem"><a href="works.html" class="navlink">Werken</a></li>
+        <li class="navitem"><a href="projects.html" class="navlink">Projecten</a></li>
+        <li class="navitem"><a href="sketchbook.html" class="navlink">Schetsboek</a></li>
+        <li class="navitem"><a href="aboutme.html" class="navlink">Over mij</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    
-    <!-- First section: Case Closed -->
-    <section class="test">
-      <img class="image" src="images/CaseClosedWebsite.jpg" alt="Website voor escaperoomspel met hacker vibes">
-      <div class="hortxt">
-        <h2 class="header">Case Closed</h2>
-        <p class="indexTxt">Een project waarin mijn team een escaperoomspel heeft gemaakt! De website fungeert als een checker voor de goede antwoorden.</p>
-        <!-- more collapsible info -->
-      </div>
-    </section>
-    <!-- Second section: Polar Patrol -->
-    <section class="test">
-      <img class="image" src="images/Polar Patrol.jpg" alt="Eindproducten voor Project Beyond">
-      <div class="hortxt">
-        <h2 class="header">Polar Patrol</h2>
-        <p class="indexTxt">TEKST HIER OVER PROJECT</p>
-      </div>
-    </section>
 
-    <!-- https://css-tricks.com/how-to-make-a-css-only-carousel/
-    good idea for showing pics of the projects? -->
+    <!-- First section: Case Closed -->
+    <article class="project">
+      <h2 class="header">Case Closed</h2>
+      <img class="projectImage" src="images/CaseClosedWebsite.jpg" alt="Website voor escaperoomspel met hacker vibes">
+      <p>Een project waarin mijn team een escaperoomspel heeft gemaakt! De website fungeert als een
+        checker voor de goede antwoorden.</p>
+      <!-- more collapsible info -->
+      <div class="extraInfo hidden" id="extraInfo1">
+        <p>Voor dit passie project heeft mijn team ervoor gekozen om een escaperoomspel te maken! Het eindproduct moest
+          ook nog de wereld verbeteren op een manier, dus hebben wij gekozen voor bewustheid van cijbersecurity! De
+          spelers bevinden zich in de rol van inspecteurs die alle data van het HvA moeten beschermen! Een hacker
+          probeert alle emails en wachtwoorden te stelen en ze moesten hun door een serie puzzels het goede antwoord te
+          vinden om hen te stoppen! Op de doos zelf zitten ook een aantal puzzels en de antwoorden die de spelers
+          krijgen kunnen ze checken door middel van een website!</p>
+        <div class="scroll">
+          <img class="scrollProjectImage" src="images/CaseClosed/box-open.jpg"
+            alt="Het escaperoomspel, open met alle inhoud te zien">
+          <img class="scrollProjectImage" src="images/CaseClosed/table-setup.jpg" alt="De setup voor de expositie">
+          <img class="scrollProjectImage" src="images/CaseClosed/testing.jpg"
+            alt="Bird-eye-view van het testen van het spel">
+          <img class="scrollProjectImage" src="images/CaseClosed/poster.jpg"
+            alt="Een poster, gemaakt voor de expositie">
+          <img class="scrollProjectImage" src="images/CaseClosed/box-open2.jpg"
+            alt="Het escaperoomspel, open met alle inhoud te zien">
+        </div>
+        <p>Ook hebben we ons spel laten testen bij een spelletjesclub, waar deze een goed uur bezig waren met ons spel!
+          Ze vonden het erg leuk en niet te makkelijk!</p>
+      </div>
+      <button id="projectbutton1" class="fancyButton">Lees meer over Case Closed</button>
+    </article>
+
+    <article class="project">
+      <h2 class="header">Polar Patrol</h2>
+      <img class="projectImage" src="images/Polar Patrol.jpg" alt="Eindproducten voor Project Beyond">
+      <p>Kinderen helpen goede gewoontes aan te leren en te helpen energie te besparen in het huishuiden!</p>
+      <!-- more collapsible info -->
+      <div class="extraInfo hidden" id="extraInfo2">
+        <p>MEER INFO OVER PROJECT</p>
+        <div class="scroll">
+          <!-- fix alts -->
+          <img class="scrollProjectImage" src="images/PolarPatrol/workingBox.jpg" alt="Het eindproduct dat aan staat">
+          <img class="scrollProjectImage" src="images/PolarPatrol/prototype.jpg"
+            alt="Een test van het prototype, het werkt">
+          <img class="scrollProjectImage" src="images/PolarPatrol/Context map 1.2.jpg"
+            alt="Context map voor Project Beyond">
+          <img class="scrollProjectImage" src="images/PolarPatrol/charactersCloseup.jpg"
+            alt="Close up van alle karakters gemaakt voor Polar Patrol">
+          <img class="scrollProjectImage" src="images/PolarPatrol/kaft.png"
+            alt="De kaft van het boek: Polar Patrol een verhelderende weg naar huis">
+          <img class="scrollProjectImage" src="images/PolarPatrol/boek.png"
+            alt="Een van de pagina's uit het boek: Polar Patrol een verhelderende weg naar huis">
+        </div>
+      </div>
+      <button id="projectbutton2" class="fancyButton">Lees meer over Polar Patrol</button>
+    </article>
 
   </main>
 

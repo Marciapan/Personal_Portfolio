@@ -1,3 +1,16 @@
+:root {
+    /* colours */
+    --primary-color: #911A58;
+    --secondary-color: #F97FB3;
+    --tertiery-color: #FFD8A8;
+    --main-white: #FFFAFA;
+    --main-black: #36454f;
+    /* fonts */
+    --titles: Sansita Swashed;
+    --header: Philosopher;
+    --text: Roboto;
+}
+
 html {
     margin: 0;
     padding: 0;
@@ -6,28 +19,86 @@ html {
 
 li {
     list-style-type: none;
+    font-family: var(--titles);
+}
+
+h2 {
+    font-family: var(--header);
+}
+
+p {
+    font-family: var(--text);
+}
+
+button {
+    font-family: var(--header);
+    font-weight: 700;
 }
 
 /* For mobile view */
 @media only screen and (max-width: 768px) {
     body {
         margin: 0;
-        background-image: url("../images/Logo_Marciapan.png");
-        background-size: 15%;
-        background-repeat: no-repeat;
-        background-position: top right;
+        background-color: var(--main-white);
     }
 
     h1 {
         font-size: 5vw;
     }
 
+    h2 {
+        margin: 0;
+        padding: 0;
+    }
+
     footer {
-        background-color: lightblue;
+        background-color: var(--secondary-color);
     }
 
     img {
         max-width: 100%;
+    }
+
+    article {
+        padding: 1em;
+    }
+
+    .fancyButton {
+        background: rgb(255, 216, 168);
+        background: linear-gradient(160deg, rgba(255, 216, 168, 1) 0%, rgba(249, 127, 179, 1) 66%);
+        border: 0;
+        border-radius: 5px;
+        color: var(--main-white);
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 500;
+        outline: transparent;
+        text-align: center;
+        text-decoration: none;
+        transition: box-shadow .2s ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        /* button style from https://pqina.nl/filepond/?ref=pqina, edited to fit my style better */
+    }
+
+    .fancyButton:not([disabled]):focus {
+        box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(145, 26, 88, 0.5), .125rem .125rem 1rem rgba(255, 216, 168, 1);
+    }
+
+    .fancyButton:not([disabled]):hover {
+        box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(145, 26, 88, 0.5), .125rem .125rem 1rem rgba(255, 216, 168, 1);
+    }
+
+    .buttonGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 0.5em;
+        width: 90%;
+        height: 50%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .credits {
@@ -37,16 +108,16 @@ li {
     .navlink {
         display: block;
         text-decoration: none;
-        color: white;
+        color: var(--main-white);
         font-size: 4.1vw;
     }
 
     .navitem:hover {
-        background-color: #111;
+        background-color: var(--main-black);
     }
 
     .navbar {
-        color: white;
+        color: var(--main-white);
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -61,7 +132,7 @@ li {
         padding: 8px;
         display: block;
         text-decoration: none;
-        color: white;
+        color: var(--main-white);
         font-size: 3vw;
     }
 
@@ -82,7 +153,7 @@ li {
     }
 
     .footerlink {
-        color: white;
+        color: var(--main-white);
         text-decoration: none;
     }
 
@@ -104,46 +175,48 @@ li {
         width: 70%;
     }
 
+    .scrollProjectImage {
+        height: 20em;
+        width: auto;
+        border-radius: 5%;
+    }
+
+    .project {
+        padding: 1em;
+    }
+
+    .project button {
+        width: 70%;
+        position: relative;
+        left: 15%;
+        right: 15%;
+    }
+
+    .projectImage {
+        display: block;
+        border-radius: 5%;
+    }
+
     .worksSection {
         display: flex;
         align-items: center;
-        margin-left: 2%;
-        margin-right: 2%;
-        margin-top: 3%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 3%;
     }
 
     .worksSection:last-child {
-        margin-bottom: 3%;
-    }
-
-    .test2 {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        flex-direction: row-reverse;
+        padding-bottom: 3%;
     }
 
     .hortxt {
+        width: 100%;
         padding: 0;
         margin: 0;
         margin-left: 2%;
         margin-right: 2%;
         display: flex;
         flex-direction: column;
-    }
-
-    .header {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .indexTxt {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .indexButton {
-        color: pink;
     }
 
     .scroll {
@@ -153,60 +226,112 @@ li {
     }
 
     .yay {
-        background-color: purple;
+        background-color: var(--primary-color);
     }
+
+
+    .home {
+        display: grid;
+        grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .head {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .head a img {
+        width: 5em;
+    }
+
+    .head h1 {
+        font-family: var(--titles);
+    }
+
+
 }
 
 /* For desktop view */
 @media only screen and (min-width: 768px) {
-    main {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        /* rows aanpassen aan content */
-        grid-template-rows: repeat(4, 1fr);
-    }
-
     body {
         margin: 0;
-        background-image: url("../images/Logo_Marciapan.png");
-        background-size: 8%;
-        background-repeat: no-repeat;
-
+        background-color: var(--main-white);
     }
 
     h1 {
-        color: purple;
-        font-size: 2vw;
-        padding: 10px;
-        margin-left: 7%;
+        font-size: 3vw;
+        margin: 0.5em;
     }
 
-    li a {
-        padding: 8px;
-        display: block;
-        text-decoration: none;
-        color: white;
+    h2 {
+        margin: 0;
+        padding: 0;
     }
 
     footer {
+        background-color: var(--secondary-color);
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    article {
+        padding: 1em;
+    }
+
+    .fancyButton {
+        background: rgb(255, 216, 168);
+        background: linear-gradient(160deg, rgba(255, 216, 168, 1) 0%, rgba(249, 127, 179, 1) 66%);
+        border: 0;
+        border-radius: 5px;
+        color: var(--main-white);
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 500;
+        outline: transparent;
+        text-align: center;
+        text-decoration: none;
+        transition: box-shadow .2s ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        /* button style from https://pqina.nl/filepond/?ref=pqina, edited to fit my style better */
+    }
+
+    .fancyButton:not([disabled]):focus {
+        box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(145, 26, 88, 0.5), .125rem .125rem 1rem rgba(255, 216, 168, 1);
+    }
+
+    .fancyButton:not([disabled]):hover {
+        box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(145, 26, 88, 0.5), .125rem .125rem 1rem rgba(255, 216, 168, 1);
+    }
+
+    .buttonGrid {
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr 2fr;
-        /* rows aanpassen aan content */
-        grid-template-rows: 3fr 1fr;
-        background-color: lightblue;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 0.5em;
+        width: 90%;
+        height: 50%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
-    .lists{
-        grid-column-start: 2;
-        grid-column-end: 4;
-    }
-
-    .navitem:hover {
-        background-color: #111;
+    .credits {
+        margin-bottom: 0;
     }
 
     .navbar {
-        color: white;
+        color: var(--main-white);
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -216,31 +341,32 @@ li {
 
     .navitem {
         float: left;
-        padding-left: 1%;
-        padding-right: 1%;
+        padding: 0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        display: block;
+        text-decoration: none;
+        color: var(--main-white);
+    }
+
+    .navitem:hover {
+        background-color: var(--main-black);
     }
 
     .navitem:first-child {
-        padding-left: 5%;
+        margin-left: 2%;
     }
 
     .navitem:last-child {
         float: right;
-        margin-right: 5%;
+        padding-right: 5%;
     }
 
-    .test {
-        grid-column-start: 2;
-        grid-column-end: -6;
-    }
-
-    .test2 {
-        grid-column-start: 6;
-        grid-column-end: -2;
-    }
-
-    .image {
-        width: 100%;
+    .navlink {
+        display: block;
+        text-decoration: none;
+        color: var(--main-white);
+        font-size: 1.8vw;
     }
 
     .footer {
@@ -251,7 +377,7 @@ li {
     }
 
     .footerlink {
-        color: black;
+        color: var(--main-white);
         text-decoration: none;
     }
 
@@ -261,10 +387,99 @@ li {
         justify-content: center;
     }
 
-    .credits {
-        margin-bottom: 0;
-        grid-row-start: 2;
-        grid-column-start:1;
+    .image {
+        display: block;
+        border-radius: 5%;
+        width: 50%;
+        height: 50%;
+    }
+
+    .sketchbookimage {
+        border-radius: 5%;
+        width: 70%;
+    }
+
+    .scrollProjectImage {
+        height: 20em;
+        width: auto;
+        border-radius: 5%;
+    }
+
+    .project {
+        padding: 1em;
+    }
+
+    .project button {
+        width: 70%;
+        position: relative;
+        left: 15%;
+        right: 15%;
+    }
+
+    .projectImage {
+        display: block;
+        border-radius: 5%;
+    }
+
+    .worksSection {
+        display: flex;
+        align-items: center;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 3%;
+    }
+
+    .worksSection:last-child {
+        padding-bottom: 3%;
+    }
+
+    .hortxt {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-left: 2%;
+        margin-right: 2%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .scroll {
+        margin: 1em;
+        overflow: auto;
+        white-space: nowrap;
+    }
+
+    .yay {
+        background-color: var(--primary-color);
+    }
+
+
+    .home {
+        display: grid;
+        grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .head {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .head a img {
+        width: 4em;
+        margin-left: 1em;
+    }
+
+    .head h1 {
+        font-family: var(--titles);
     }
 
 }
