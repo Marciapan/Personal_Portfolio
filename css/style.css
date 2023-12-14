@@ -263,25 +263,33 @@ button {
 @media only screen and (min-width: 768px) {
     body {
         margin: 0;
-        background-color: var(--main-white);
+        background: rgb(255, 216, 168);
+        background: linear-gradient(160deg, rgba(255, 216, 168, 1) 0%, rgba(255, 250, 250, 1) 40%, rgba(255, 250, 250, 1) 50%, rgba(255, 250, 250, 1) 60%, rgba(249, 127, 179, 1) 100%);
     }
 
     h1 {
+        color: var(--main-black);
         font-size: 3vw;
         margin: 0.5em;
     }
 
     h2 {
+        color: var(--main-black);
         margin: 0;
         padding: 0;
     }
 
     p {
+        color: var(--main-black);
         font-size: 20px;
     }
 
     footer {
-        background-color: var(--secondary-color);
+        background-color: var(--main-black);
+    }
+
+    footer li {
+        color: var(--main-white);
     }
 
     img {
@@ -336,13 +344,19 @@ button {
         grid-template-columns: repeat(3, 1fr);
         column-gap: 0.5em;
         width: 90%;
-        height: 50%;
+        height: 3em;
         margin-left: 5%;
         margin-right: 5%;
+        margin-bottom: 5%;
     }
 
     .credits {
+        display: flex;
+        font-size: 1vw;
         margin-bottom: 0;
+        margin-top: 0;
+        color: var(--tertiery-color);
+        justify-content: center;
     }
 
     .navbar {
@@ -386,21 +400,24 @@ button {
     }
 
     .footer {
-        display: inline-block;
+        display: flex;
         padding-inline-start: 0;
         margin: 0;
-        padding: 10px;
+        padding: 0.5em;
     }
 
     .footerlink {
         color: var(--main-white);
         text-decoration: none;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
 
     .lists {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
     }
 
     .image {
@@ -448,8 +465,8 @@ button {
 
     .extraInfo p {
         padding-left: 5%;
-    padding-right: 5%;
-    width: 90%;
+        padding-right: 5%;
+        width: 90%;
     }
 
     .worksSection {
@@ -487,10 +504,19 @@ button {
 
     .home {
         display: grid;
-        grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+        /* grid-template-rows: 1fr 1fr 1fr; */
+        grid-template-columns: 2fr 2fr;
         align-items: center;
         justify-items: center;
         width: 100%;
+    }
+
+    .home article {
+        grid-column: 1;
+    }
+
+    .homePic {
+        grid-column: 2 !important;
     }
 
     .hidden {
