@@ -27,6 +27,7 @@
       <h1>Tessa van Breukelen - Home</h1>
     </section>
     <nav>
+      <!-- nav boxes zijn niet clickable, alleen de tekst: FIXEN!!!! -->
       <ul class="navbar">
         <li class="navitem"><a href="index.html" class="navlink">Home</a></li>
         <li class="navitem"><a href="works.html" class="navlink">Werken</a></li>
@@ -59,14 +60,16 @@
       </div>
 
       <article class="homePic">
-        <img src="./images/Logo_Marciapan.png" alt="My personal logo">
+        <img src="./images/Logo_Marciapan.png" alt="My personal logo" class="logo">
       </article>
 
+
+      <!-- fix buttons vs a link thingies, hele button moet clickable zijn!! -->
     </section>
     <section class="buttonGrid">
-      <button class="fancyButton">Werken</button>
-      <button class="fancyButton">Projecten</button>
-      <button class="fancyButton">Schetsboek</button>
+      <button class="fancyButton"><a href="works.html">Werken</a></button>
+      <button class="fancyButton"><a href="projects.html">Projecten</a></button>
+      <button class="fancyButton"><a href="sketchbook.html">Schetsboek</a></button>
     </section>
 
 
@@ -76,13 +79,13 @@
     <div class="lists">
       <ul class="footer">
         <li><a href="index.html" class="footerlink">Home</a></li>
-        <li>|</li>
+        <li class="mobileHidden">|</li>
         <li><a href="works.html" class="footerlink">Werken</a></li>
-        <li>|</li>
+        <li class="mobileHidden">|</li>
         <li><a href="projects.html" class="footerlink">Projecten</a></li>
-        <li>|</li>
+        <li class="mobileHidden">|</li>
         <li><a href="sketchbook.html" class="footerlink">Schetsboek</a></li>
-        <li>|</li>
+        <li class="mobileHidden">|</li>
         <li><a href="aboutme.html" class="footerlink">Over mij</a></li>
       </ul>
       <ul class="footer">
