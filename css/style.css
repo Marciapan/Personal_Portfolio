@@ -30,10 +30,47 @@ p {
     font-family: var(--text);
 }
 
+label{
+    font-family: var(--header);
+}
+
 button {
     font-family: var(--header);
     font-weight: 700;
 }
+
+/* test for progress bar */
+  @keyframes test {
+    100% {
+      background-color: aqua;
+    }
+  }
+
+  .line{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    padding: 1em;
+  }
+
+  progress {
+    border-radius: 7px; 
+    width: 100%;
+    height: 22px;
+    box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+  }
+  /* background of the progress bar */
+  progress::-webkit-progress-bar {
+    background-color: var(--main-white);
+    border-radius: 7px;
+  }
+  /* the bar itself */
+  progress::-webkit-progress-value {
+    background-color: var(--secondary-color);
+    border-radius: 7px;
+    -webkit-animation: test 5s linear;
+    animation: test 5s linear;
+  }
 
 /* For mobile view */
 @media only screen and (max-width: 768px) {
@@ -48,8 +85,13 @@ button {
     }
 
     h2 {
+        font-size: 5vw;
         margin: 0;
         padding: 0;
+    }
+
+    p{
+        font-size: 4vw;
     }
 
     footer {
@@ -143,6 +185,7 @@ button {
         padding: 0.5em;
         display: block;
         text-decoration: none;
+        font-family: var(--header);
         color: var(--main-white);
         font-size: 3vw;
     }

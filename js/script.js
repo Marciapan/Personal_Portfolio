@@ -32,3 +32,5 @@ function extraInfo2Toggle(){
     console.log("Hiding or showing extra info");
     extraInfo2.classList.toggle("hidden");
 }
+
+// test voor progress bar
