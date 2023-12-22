@@ -8,29 +8,30 @@ var projectbutton2 = document.querySelector("#projectbutton2");
 var extraInfo1 = document.querySelector("#extraInfo1");
 var extraInfo2 = document.querySelector("#extraInfo2");
 
-// eventlisteners
-projectbutton1.addEventListener("click", extraInfo1Toggle);
-projectbutton2.addEventListener("click", extraInfo2Toggle);
+var emailButton = document.querySelector("#email");
+var myEmail = "breukelentessa@gmail.com";
 
-console.log(projectbutton2);
-console.log(extraInfo2);
+console.log(emailButton);
 
 
 // functions
-function testDit(){
-    console.log("Test voor JS");
-    work1.classList.toggle("yay");
-
-}
-
-function extraInfo1Toggle(){
+function extraInfo1Toggle() {
     console.log("Hiding extra info");
     extraInfo1.classList.toggle("hidden");
 }
 
-function extraInfo2Toggle(){
+function extraInfo2Toggle() {
     console.log("Hiding or showing extra info");
     extraInfo2.classList.toggle("hidden");
 }
 
-// test voor progress bar
+function copyMail() {
+    navigator.clipboard.writeText(myEmail);
+    alert("Copied my email adress: " + myEmail);
+}
+// Eventlisteners stop each other from working, if the first one isnt read they all stop working. I need to figure out a way to specify which page the user is on, or make seperate js files for all my html files...
+// eventlisteners
+emailButton.addEventListener("click", copyMail);
+projectbutton1.addEventListener("click", extraInfo1Toggle);
+projectbutton2.addEventListener("click", extraInfo2Toggle);
+

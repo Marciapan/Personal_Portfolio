@@ -30,7 +30,7 @@ p {
     font-family: var(--text);
 }
 
-label{
+label {
     font-family: var(--header);
 }
 
@@ -40,37 +40,39 @@ button {
 }
 
 /* test for progress bar */
-  @keyframes test {
+@keyframes test {
     100% {
-      background-color: aqua;
+        background-color: aqua;
     }
-  }
+}
 
-  .line{
+.line {
     display: grid;
     grid-template-columns: 1fr 3fr;
     align-items: center;
     padding: 1em;
-  }
+}
 
-  progress {
-    border-radius: 7px; 
+progress {
+    border-radius: 5px;
     width: 100%;
     height: 22px;
-    box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
-  }
-  /* background of the progress bar */
-  progress::-webkit-progress-bar {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* background of the progress bar */
+progress::-webkit-progress-bar {
     background-color: var(--main-white);
-    border-radius: 7px;
-  }
-  /* the bar itself */
-  progress::-webkit-progress-value {
+    border-radius: 5px;
+}
+
+/* the bar itself */
+progress::-webkit-progress-value {
     background-color: var(--secondary-color);
-    border-radius: 7px;
+    border-radius: 5px;
     -webkit-animation: test 5s linear;
     animation: test 5s linear;
-  }
+}
 
 /* For mobile view */
 @media only screen and (max-width: 768px) {
@@ -90,7 +92,7 @@ button {
         padding: 0;
     }
 
-    p{
+    p {
         font-size: 4vw;
     }
 
@@ -209,6 +211,15 @@ button {
     .footerlink {
         color: var(--main-white);
         text-decoration: none;
+    }
+
+    .footerIcon {
+        border-radius: 1em;
+        width: 3em;
+    }
+
+    .footerIcon:first-child, .footerIcon:last-child{
+        margin-bottom: 0.5em;
     }
 
     .lists {
@@ -353,7 +364,7 @@ button {
         font-size: 20px;
     }
 
-    a{
+    a {
         text-decoration: none;
         color: var(--main-white);
     }
@@ -485,6 +496,12 @@ button {
         text-decoration: none;
         padding-left: 0.5em;
         padding-right: 0.5em;
+    }
+
+    .footerIcon {
+        border-radius: 1.5em;
+        width: 3em;
+        padding: 1em;
     }
 
     .lists {
