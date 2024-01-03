@@ -17,9 +17,14 @@ html {
     display: grid;
 }
 
+ul {
+    padding: 0;
+}
+
 li {
     list-style-type: none;
     font-family: var(--titles);
+    padding: 0;
 }
 
 h2 {
@@ -218,7 +223,8 @@ progress::-webkit-progress-value {
         width: 3em;
     }
 
-    .footerIcon:first-child, .footerIcon:last-child{
+    .footerIcon:first-child,
+    .footerIcon:last-child {
         margin-bottom: 0.5em;
     }
 
@@ -334,6 +340,23 @@ progress::-webkit-progress-value {
 
     .mobileHidden {
         display: none;
+    }
+
+    .contactgegevens {
+        display: flex;
+        justify-content: center;
+        font-size: 1.3em;
+        padding-top: 4em;
+        padding-bottom: 4em;
+    }
+
+    .contactgegevens article ul li {
+        color: var(--main-black);
+    }
+
+    .contactgegevens article ul li a {
+        text-decoration: underline;
+        color: var(--main-black);
     }
 
 
@@ -628,6 +651,23 @@ progress::-webkit-progress-value {
 
     .head h1 {
         font-family: var(--titles);
+    }
+
+    .contactgegevens {
+        display: flex;
+        justify-content: center;
+        font-size: 1.8em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .contactgegevens article ul li {
+        color: var(--main-black);
+    }
+
+    .contactgegevens article ul li a {
+        text-decoration: underline;
+        color: var(--main-black);
     }
 
 }
